@@ -4,8 +4,8 @@
 }
 
 body {
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    font-family: 'Roboto', sans-serif;
 }
 
 .flex-wrap {
@@ -20,11 +20,12 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 70%;
+    max-width: 60%;
     margin: auto;
     padding: 10px;
-    background-color: #ffffff69;
+    background-color: #e3e3e369;
     gap: 10px 0;
+    border-radius: 5px;
 }
 
 .main {
@@ -49,14 +50,34 @@ body {
 
 .control {
     display: flex;
-    gap: 10px;
     order: 3;
+}
+
+.control label {
+    cursor: pointer;
+    padding: 10px;
+}
+
+#slide1:checked~.flex-wrap .slider label[for = 'slide1'] .r-btn,
+#slide2:checked~.flex-wrap .slider label[for = 'slide2'] .r-btn,
+#slide3:checked~.flex-wrap .slider label[for = 'slide3'] .r-btn,
+#slide4:checked~.flex-wrap .slider label[for = 'slide4'] .r-btn {
+    border: 2px solid rgb(103, 169, 255);
+    background-color: rgb(107, 107, 107);
 }
 
 .r-btn {
     height: 20px;
     width: 20px;
-    background-color: black;
+    background-color: rgb(73, 73, 73);
+    border: 2px solid rgb(73, 73, 73);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+.control label:hover .r-btn {
+    background-color: rgb(107, 107, 107);
+    border: 2px solid rgb(107, 107, 107);
 }
 
 input[type='radio'] {
@@ -89,17 +110,4 @@ input[type='radio'] {
 
 .text span {
     text-align: left;
-}
-
-#slide1:checked~.flex-wrap .slider .text1 {
-    opacity: 1;
-}
-#slide2:checked~.flex-wrap .slider .text2 {
-    opacity: 1;
-}
-#slide3:checked~.flex-wrap .slider .text3 {
-    opacity: 1;
-}
-#slide4:checked~.flex-wrap .slider .text4 {
-    opacity: 1;
 }
