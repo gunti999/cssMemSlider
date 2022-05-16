@@ -66,6 +66,13 @@ body {
     background-color: rgb(107, 107, 107);
 }
 
+#slide1:checked~.flex-wrap .slider label[for = 'slide1']:hover .r-btn,
+#slide2:checked~.flex-wrap .slider label[for = 'slide2']:hover .r-btn,
+#slide3:checked~.flex-wrap .slider label[for = 'slide3']:hover .r-btn,
+#slide4:checked~.flex-wrap .slider label[for = 'slide4']:hover .r-btn {
+    border: 2px solid rgb(35, 131, 255);
+} 
+
 .r-btn {
     height: 20px;
     width: 20px;
