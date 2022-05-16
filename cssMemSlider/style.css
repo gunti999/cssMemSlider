@@ -103,11 +103,25 @@ input[type='radio'] {
 
 .text {
     flex-grow: 0;
-    width: 70%;
+    width: 60%;
     text-align: left;
     align-items: center;
 }
 
 .text span {
     text-align: left;
+}
+
+@media (max-width: 760px) {
+    .control {
+        order: 0;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .slider {
+        justify-content: center;
+    }
 }
